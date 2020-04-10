@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    background-color: black;
+}
+
+canvas {
+    position: relative;
+}
+
+
+
+input {
+    width: 80vw;
+    position: fixed;
+    top: 90vh; left: 10vw;
+    border: 1px solid dimgray;
+    color: white;
+    background-color: black;
+}
+
+span {
+    width: 90vw;
+    display: block;
+    position: fixed;
+    top: 5vmin; left: 5vw;
+    text-align: center;
+    color: lightgray;
+}
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>canvas animation</title>
+	<link href="back.css" type="text/css" rel="stylesheet">
+	  <script src="back.js" language="javascript" type="text/javascript"></script>
+  </head>
+  <body>
+  <canvas></canvas>
+  <script>
+      var sin = Math.sin, cos = Math.cos;
+      var exp = Math.exp, log = Math.log;
+      var pow = Math.pow, sqrt = Math.sqrt;
+      var max = Math.max, min = Math.min;
+      var pi = Math.PI, e = Math.e;
+      
+      function reactivate(input) {
+        var func = input.value;
+        
+        func = 'function u(x,y,z){return '+func+'}';
+        try {
+          eval(func);
+        } catch(e) {
+          navigator.vibrate(200);
+          return;
+        }
+        
+        eval('f=u');
+        restart();
+        document.querySelector('span').
+          innerText = input.value;
+        input.value = '';
+      }
+    </script>
+   <!-- <input onchange="reactivate(this)">
+    x*x + y*y + z*z - 0.4    <span>x*x + y*y + z*z - 0.4</span>-->
+  </body>
+</html>
